@@ -102,6 +102,21 @@
   \end{itemize}
 \end{multicols}
 \vspace{-0.7cm}
+
+\subsubsection{Opertions}
+\vspace{-0.6cm}
+\begin{multicols}{2}
+\begin{lstlisting}
+Addition              # 5 + 3 = 8
+Subtraction           # 5 - 3 = 2
+Multiplication        # 5 * 3 = 15
+Division              # 5 / 3 = 1.667
+Modulus               # 5 % 3 = 2
+Exponentiation        # 5 ** 3 = 125
+Floor division        # 5 // 3 = 1
+\end{lstlisting}
+\vspace{-0.7cm}
+
 \begin{multicols}{2}
 \begin{lstlisting}
 abs(-5)              # = 5
@@ -142,6 +157,15 @@ user_input = input("Enter something: ")  # Waits for user input (String)
   print(s[1:-1:2])       # Output: 'el'
   print("Hell" in s)     # Output: True
   print(s + ", Goodbye") # Output: 'Hello, Goodbye'
+  s.split('')            # output: ['H', 'e', 'l', 'l', 'o']
+\end{lstlisting}
+\vspace{-0.1cm}
+\begin{lstlisting}
+  arr[start:stop]          # items start through stop - 1
+  arr[start:]              # items start through the rest of the array
+  arr[:stop]               # items from the beginning through stop - 1
+  arr[:]                   # a copy of the whole array
+  arr[start:stop:step]     # start through not past stop, by step
 \end{lstlisting}
 
 \subsubsection{List Methods}
@@ -621,6 +645,80 @@ def order(str1, str2):
   return str2[0] + order(str1, str2[1:])
 \end{lstlisting}
 
+
+\subsection{How to wirte API by PEP8}\label{sec:PEP8}
+\vspace{-0.6cm}
+\begin{multicols}{4}
+\begin{lstlisting}
+"""
+@Project: Maman11_Q1
+
+@Description : Describe the overall solution you submit.
+
+@ID : 123456789
+@Author: first_and_last name
+@semester : 24b
+"""
+
+# Import necessary modules
+import random
+
+
+class MMN11_Q1():
+    """
+    Describe the content of the MMN11_Q1 class
+
+    Attributes:
+        describe each of the attributes in a new line. <name> (<type>): meaning
+        for example:
+
+        title (str): The title of the book.
+        author (str): The author of the book.
+        price (float): The price of the book.
+    """
+
+    def __init__(self, title, author, price):
+        """
+        Initialize a Book instance.
+        Args:
+            title (str): The title of the book.
+            author (str): The author of the book.
+            price (float): The price of the book.
+        """
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def display_info(self):
+        """
+        Display information about the book.
+        Returns:
+            str: A formatted string with book details.
+        """
+        return f"{self.title} by {self.author} - ${self.price:.2f}"
+
+
+    def doSomething(self, param1, param2="default_value_for_param2"):
+        """
+        A short description of the function
+        Do not forget to add remarks for any significant line of code
+        Make sure to use meaningful names for your variables
+
+        @param:
+            param1 (int): The first parameter
+            param2 (str): The second parameter. with default value "default_value_for_param2"
+        @Returns:
+            void
+        """
+        print(param1)
+
+
+if __name__ == "__main__":
+    main()
+
+\end{lstlisting}
+\end{multicols}
+\vspace{-0.7cm}
 % \restoregeometry
 
 \end{document}
